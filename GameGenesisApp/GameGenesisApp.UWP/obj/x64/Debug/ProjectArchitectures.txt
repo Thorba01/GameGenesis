@@ -1,0 +1,1 @@
+F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\GameGenesisApp.UWP.csproj;x64
