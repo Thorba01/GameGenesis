@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -74,7 +75,7 @@ namespace GameGenesisApp.Services
             if (password == passwordTwo)
             {
                 var success = ValidatePassword(password);
-                if (true)//success.Success) // FOR DEV ONLY MAKE SURE TO CHANGE IT WHEN DONE !!!!
+                if (true)//success.Success) // FOR DEV ONLY MAKE SURE TO CHANGE IT WHEN IT'S DONE !!!!
                 {
                     var user = new User
                     {
@@ -133,6 +134,17 @@ namespace GameGenesisApp.Services
             await SecureStorage.SetAsync("jwt_token", token.Data);
 
             return token;
+        }
+
+        public async Task<RootShop> GetShopAsync()
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var productsAsync = await client.GetStringAsync(url + "api/Product/Shop");
+            var root = JsonConvert.DeserializeObject<RootShop>(productsAsync);
+
+            return await Task.FromResult(root);
         }
     }
 }

@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>ec0cc741-fd3e-485c-81be-68815c480690</PackageIdentityName>
     <PackageIdentityPublisher>CN=20A73B93-F705-4B2C-91E5-CCCD8FF55FB8</PackageIdentityPublisher>
-    <IntermediateOutputPath>F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\AppX</LayoutDir>
+    <LayoutDir>F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>8F3D8F950BB800915F71D4BB805C1FFE262F78CDA6E3EF993130C40A12985F3A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>B026C928-DA1F-4CCB-95D6-D6FDDB2F4677_1.0.0.0_x64__0g32f1swwxyxw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>B026C928-DA1F-4CCB-95D6-D6FDDB2F4677_0g32f1swwxyxw!App</RegisteredUserModeAppID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-31T13:27:31.430</Modified>
+      <Modified>2023-06-01T18:53:12.478</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\GameGenesisApp.UWP.exe">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\GameGenesisApp.UWP.exe">
       <PackagePath>entrypoint\GameGenesisApp.UWP.exe</PackagePath>
-      <Modified>2023-05-31T13:15:40.532</Modified>
+      <Modified>2023-06-01T18:53:11.688</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tpate\.nuget\packages\newtonsoft.json\13.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -70,9 +70,9 @@
       <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
       <Modified>2021-10-14T09:55:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp\bin\Debug\netstandard2.0\GameGenesisApp.dll">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\bin\Debug\netstandard2.0\GameGenesisApp.dll">
       <PackagePath>GameGenesisApp.dll</PackagePath>
-      <Modified>2023-05-31T13:27:26.363</Modified>
+      <Modified>2023-06-01T18:53:06.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tpate\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -86,168 +86,168 @@
       <PackagePath>Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml</PackagePath>
       <Modified>2021-10-14T09:49:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2023-05-31T13:08:01.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.910</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.911</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.912</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.913</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.914</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.915</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.916</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.917</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.918</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.919</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.920</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.921</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.922</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.923</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.923</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.924</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.925</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.926</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.927</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.927</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.929</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.930</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.930</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-100.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.931</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.932</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-400.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2023-05-31T13:08:01.933</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\xamarin_logo.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
       <Modified>2023-05-31T13:08:01.991</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\icon_about.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\icon_about.png">
       <PackagePath>icon_about.png</PackagePath>
       <Modified>2023-05-31T13:08:01.950</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\icon_feed.png">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\icon_feed.png">
       <PackagePath>icon_feed.png</PackagePath>
       <Modified>2023-05-31T13:08:01.952</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\GameGenesisApp.UWP.xr.xml">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\GameGenesisApp.UWP.xr.xml">
       <PackagePath>GameGenesisApp.UWP.xr.xml</PackagePath>
       <Modified>2023-05-31T13:15:40.458</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-05-31T13:27:30.684</Modified>
+      <Modified>2023-06-01T18:53:11.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-05-31T13:27:30.684</Modified>
+      <Modified>2023-06-01T18:53:11.646</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.22000.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -261,13 +261,13 @@
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2020-07-10T00:07:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <Modified>2023-05-31T13:15:40.950</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\APPPROJET\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Core\GameGenesisApp.UWP.exe">
+    <AppxPackagedFile Include="F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Core\GameGenesisApp.UWP.exe">
       <PackagePath>GameGenesisApp.UWP.exe</PackagePath>
-      <Modified>2023-05-31T13:27:31.423</Modified>
+      <Modified>2023-06-01T18:53:12.472</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

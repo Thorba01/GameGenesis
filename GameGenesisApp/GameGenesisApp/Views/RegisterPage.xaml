@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              x:Class="GameGenesisApp.Views.RegisterPage"
              xmlns:viewModels="clr-namespace:GameGenesisApp.ViewModels;assembly=GameGenesisApp"
@@ -13,10 +14,14 @@
     </ContentPage.BindingContext>
 
     <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+        <Label Text="Email"/>
         <Entry Text="{Binding Email}"  Placeholder="Email" />
+        <Label Text="Password"/>
         <Entry Text="{Binding Password}" Placeholder="Password" />
+        <Label Text="Repeat Password"/>
         <Entry Text="{Binding PasswordTwo}" Placeholder="Repeat Password" />
-        <DatePicker Date="{Binding BirthDate}" Format="D" />
+        <Label Text="BirthDate"/>
+        <DatePicker x:Name="DatePicker" Date="{Binding BirthDate}" Format="dd_MM_yyyy" MinimumDate="01/01/1943" MaximumDate="{x:Static System:DateTime.Today}"/>
         <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="FillAndExpand"></Button>
     </StackLayout>
 
