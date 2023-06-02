@@ -146,5 +146,75 @@ namespace GameGenesisApp.Services
 
             return await Task.FromResult(root);
         }
+
+        public async Task<RootProduct> GetProductById(int productId)
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var response = await client.GetStringAsync(url + "api/Product/" + productId);
+
+            var product = JsonConvert.DeserializeObject<RootProduct>(response);
+            return await Task.FromResult(product);
+        }
+
+        public async Task AddProductToBasket(int productId, int basketId)
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var basketprod = new BasketProductId
+            {
+                BasketsId = basketId,
+                ProductsId = productId
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(basketprod), Encoding.UTF8, "application/json");
+            await client.PostAsync(url + "api/Basket/Product", content);
+        }
+
+        public async Task<RootBasket> GetBasket()
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var response = await client.GetStringAsync(url + "api/Basket/GetAll");
+            var basket = JsonConvert.DeserializeObject<RootBasket>(response);
+            return await Task.FromResult(basket);
+        }
+
+        public async Task<RootBasketProduct> GetProductFromBasket()
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var response = await client.GetStringAsync(url + "api/Product/Basket");
+            var products = JsonConvert.DeserializeObject<RootBasketProduct>(response);
+
+            return await Task.FromResult(products);
+        }
+
+        public async Task RemoveProductFromBasket(int productId, int basketId)
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var basketprod = new BasketProductId
+            {
+                BasketsId = basketId,
+                ProductsId = productId
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(basketprod), Encoding.UTF8, "application/json");
+
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Delete,
+                RequestUri = new Uri(url + "api/Basket/Product"),
+                Content = content
+            };
+
+            await client.SendAsync(request);
+        }
     }
 }

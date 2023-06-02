@@ -25,7 +25,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Product">
                     <ViewCell>
-                        <Label Text="{Binding Name}"
+                        <Label Text="{Binding name}"
                                 VerticalOptions="Center"
                                 LineBreakMode="NoWrap"
                                 FontAttributes="Bold"

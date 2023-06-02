@@ -85,12 +85,9 @@ namespace GameGenesisApp.ViewModels
 
         async void OnItemSelected(Product product)
         {
-            Debug.WriteLine("ici ////////////////////////////////////////////");
             if (product == null)
                 return;
-            Debug.WriteLine("pas null ////////////////////////////////////////////");
-
-            // This will push the ItemDetailPage onto the navigation stack
+            Debug.WriteLine(product.Id + " Main item //////////////////////////////////////////////////////////");
 
             await Shell.Current.GoToAsync($"{nameof(ProductDetailsPage)}?{nameof(ProductDetailsViewModel.ProductId)}={product.Id}");
         }

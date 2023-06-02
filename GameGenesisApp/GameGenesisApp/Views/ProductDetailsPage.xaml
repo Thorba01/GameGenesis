@@ -1,12 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GameGenesisApp.Views.ProductDetailsPage">
+             x:Class="GameGenesisApp.Views.ProductDetailsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:GameGenesisApp.ViewModels"  
+             xmlns:model="clr-namespace:GameGenesisApp.Models"  
+             x:DataType="local:ProductDetailsViewModel"
+             x:Name="BrowseItemsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout >
+            <Label Text="{Binding Name}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Description}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Price}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Add To Basket" Command="{Binding AddToBasketCommand}" IsVisible="{Binding IsAddButtonVisible}"/>
+            <Button Text="Remove From Basket" Command="{Binding RemoveFromBasketCommand}" IsVisible="{Binding IsRemoveButtonVisible}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
