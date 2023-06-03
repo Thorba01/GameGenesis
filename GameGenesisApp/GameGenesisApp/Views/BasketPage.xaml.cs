@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameGenesisApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,18 @@ namespace GameGenesisApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class BasketPage : ContentPage
 	{
-		public BasketPage ()
+        BasketViewModel _viewModel;
+
+        public BasketPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            BindingContext = _viewModel = new BasketViewModel();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.OnAppearing();
+        }
+    }
 }

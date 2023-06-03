@@ -21,6 +21,8 @@ namespace GameGenesisApp.ViewModels
         ApiServices _apiServices = new ApiServices();
         public Command GoToLibrary { get; }
         public Command GoToBasket { get; }
+        public Command GoToShop { get; }
+
         public Command<Product> ProductTapped { get; }
 
         public MainViewModel ()
@@ -29,6 +31,8 @@ namespace GameGenesisApp.ViewModels
 
             GoToLibrary = new Command(OnGoToLibrary);
             GoToBasket = new Command(OnGoToBasket);
+            GoToShop = new Command(OnGoToShop);
+
             Shop = new ObservableCollection<Product>();
         }
 
@@ -40,6 +44,11 @@ namespace GameGenesisApp.ViewModels
         private async void OnGoToBasket(object obj)
         {
             await Shell.Current.GoToAsync(nameof(BasketPage));
+        }
+
+        private async void OnGoToShop(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(MainPage));
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -87,7 +96,6 @@ namespace GameGenesisApp.ViewModels
         {
             if (product == null)
                 return;
-            Debug.WriteLine(product.Id + " Main item //////////////////////////////////////////////////////////");
 
             await Shell.Current.GoToAsync($"{nameof(ProductDetailsPage)}?{nameof(ProductDetailsViewModel.ProductId)}={product.Id}");
         }

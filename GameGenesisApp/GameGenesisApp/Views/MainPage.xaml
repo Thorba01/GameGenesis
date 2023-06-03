@@ -16,10 +16,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
 
         <Button Grid.Row="0" Grid.Column="0" Text="Library" Command="{Binding GoToLibrary}" />
         <Button Grid.Row="0" Grid.Column="1" Text="Basket" Command="{Binding GoToBasket}" />
+        <Button Grid.Row="0" Grid.Column="2" Text="Shop" Command="{Binding GoToShop}" />
 
         <ListView Grid.Row="1" x:Name="ShopListView" ItemsSource="{Binding Shop}">
             <ListView.ItemTemplate>

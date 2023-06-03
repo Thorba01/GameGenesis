@@ -28,12 +28,18 @@ namespace GameGenesisApp.ViewModels
         async void IsProductInBasket()
         {
             var response = await _apiServices.GetProductFromBasket();
-            foreach(Product prod in response.Products)
+            if (response.Products.Count == 0)
+            {
+                IsAddButtonVisible = true;
+                IsRemoveButtonVisible = false;
+            }
+            foreach (Product prod in response.Products)
             {
                 if(prod.Id == productId)
                 {
                     IsAddButtonVisible = false;
                     IsRemoveButtonVisible = true;
+                    break;
                 }
                 else
                 {

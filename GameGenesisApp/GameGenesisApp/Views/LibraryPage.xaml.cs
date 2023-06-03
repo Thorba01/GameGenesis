@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameGenesisApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,19 @@ namespace GameGenesisApp.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LibraryPage : ContentPage
 	{
-		public LibraryPage ()
+        LibraryViewModel _viewModel;
+
+        public LibraryPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            BindingContext = _viewModel = new LibraryViewModel();
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            _viewModel.OnAppearing();
+        }
+    }
 }

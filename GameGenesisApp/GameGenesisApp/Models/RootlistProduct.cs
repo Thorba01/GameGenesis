@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GameGenesisApp.Models
 {
-    public class RootBasketProduct
+    public class RootlistProduct
     {
         public List<Product> Products { get; set; }
         public bool Success { get; set; }

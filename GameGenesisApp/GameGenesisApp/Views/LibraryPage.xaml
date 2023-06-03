@@ -1,12 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GameGenesisApp.Views.LibraryPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="GameGenesisApp.Views.LibraryPage"
+             xmlns:local="clr-namespace:GameGenesisApp.ViewModels"  
+             xmlns:model="clr-namespace:GameGenesisApp.Models"  
+             x:DataType="local:LibraryViewModel"
+             x:Name="BrowseItemsPage">
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Text="Library" Command="{Binding GoToLibrary}" />
+        <Button Grid.Row="0" Grid.Column="1" Text="Basket" Command="{Binding GoToBasket}" />
+        <Button Grid.Row="0" Grid.Column="2" Text="Shop" Command="{Binding GoToShop}" />
+
+        <ListView Grid.Row="1" x:Name="ShopListView" ItemsSource="{Binding Basket}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="model:Product">
+                    <ViewCell>
+                        <Label Text="{Binding name}"
+                                VerticalOptions="Center"
+                                LineBreakMode="NoWrap"
+                                FontAttributes="Bold"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:LibraryViewModel}}, Path=ProductTapped}"		
+                                CommandParameter="{Binding .}">
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    
 </ContentPage>

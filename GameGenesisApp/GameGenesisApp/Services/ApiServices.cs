@@ -183,13 +183,13 @@ namespace GameGenesisApp.Services
             return await Task.FromResult(basket);
         }
 
-        public async Task<RootBasketProduct> GetProductFromBasket()
+        public async Task<RootlistProduct> GetProductFromBasket()
         {
             var storedToken = await SecureStorage.GetAsync("jwt_token");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
 
             var response = await client.GetStringAsync(url + "api/Product/Basket");
-            var products = JsonConvert.DeserializeObject<RootBasketProduct>(response);
+            var products = JsonConvert.DeserializeObject<RootlistProduct>(response);
 
             return await Task.FromResult(products);
         }
@@ -215,6 +215,17 @@ namespace GameGenesisApp.Services
             };
 
             await client.SendAsync(request);
+        }
+
+        public async Task<RootlistProduct> GetProductFromLibrary()
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var response = await client.GetStringAsync(url + "api/Product/Library");
+            var products = JsonConvert.DeserializeObject<RootlistProduct>(response);
+
+            return await Task.FromResult(products);
         }
     }
 }
