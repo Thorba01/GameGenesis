@@ -4,7 +4,7 @@
              x:Class="GameGenesisApp.Views.ProductDetailsPage"
              Title="{Binding Title}"
              xmlns:local="clr-namespace:GameGenesisApp.ViewModels"  
-             xmlns:model="clr-namespace:GameGenesisApp.Models"  
+             xmlns:model="clr-namespace:GameGenesisApp.Models" 
              x:DataType="local:ProductDetailsViewModel"
              x:Name="BrowseItemsPage">
     <ContentPage.Content>
@@ -18,6 +18,32 @@
             <Label Text="{Binding Price}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            
+            <ListView ItemsSource="{Binding Categories}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Category">
+                        <ViewCell>
+                            <Label Text="{Binding Name}"
+                                VerticalOptions="Center"
+                                LineBreakMode="NoWrap"
+                                FontAttributes="Bold"
+                                Style="{DynamicResource ListItemTextStyle}" 
+                                FontSize="16">
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView ItemsSource="{Binding Images}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Image">
+                        <ViewCell>
+                            <Image
+                                Source="{Binding Path}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Button Text="Add To Basket" Command="{Binding AddToBasketCommand}" IsVisible="{Binding IsAddButtonVisible}"/>
             <Button Text="Remove From Basket" Command="{Binding RemoveFromBasketCommand}" IsVisible="{Binding IsRemoveButtonVisible}"/>
         </StackLayout>

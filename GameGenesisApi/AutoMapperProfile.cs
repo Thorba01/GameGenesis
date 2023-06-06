@@ -2,6 +2,7 @@
 using GameGenesisApi.Dtos.Account;
 using GameGenesisApi.Dtos.Basket;
 using GameGenesisApi.Dtos.Category;
+using GameGenesisApi.Dtos.Image;
 using GameGenesisApi.Dtos.Library;
 using GameGenesisApi.Dtos.Product;
 using GameGenesisApi.Dtos.Shop;
@@ -25,6 +26,8 @@ namespace GameGenesisApi
             CreateMap<AddProductDto, Product>();
             CreateMap<Shop, GetShopDto>();
             CreateMap<AddShopDto, Shop>();
+            CreateMap<AddImageDto, Image>();
+            CreateMap<Image, GetImageDto>();
         }
 
     }

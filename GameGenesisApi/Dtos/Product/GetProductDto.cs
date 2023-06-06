@@ -1,4 +1,5 @@
 ﻿using GameGenesisApi.Dtos.Category;
+using GameGenesisApi.Dtos.Image;
 using GameGenesisApi.Models;
 
 namespace GameGenesisApi.Dtos.Product
@@ -11,5 +12,6 @@ namespace GameGenesisApi.Dtos.Product
         public int AuthorId { get; set; }
         public float Price { get; set; }
         public List<GetCategoryDto>? Categories { get; set; }
+        public List<GetImageDto>? Images { get; set; }
     }
 }

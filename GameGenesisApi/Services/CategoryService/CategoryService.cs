@@ -44,13 +44,13 @@ namespace GameGenesisApi.Services.CategoryService
 
             try
             {
-                var match = await _context.ProductCategorys.FirstOrDefaultAsync(m => m.Id == id);
-                if (match is null)
+                var category = await _context.ProductCategorys.FirstOrDefaultAsync(m => m.Id == id);
+                if (category is null)
                 {
                     throw new Exception($"Category with Id '{id}' not found.");
                 }
 
-                _context.ProductCategorys.Remove(match);
+                _context.ProductCategorys.Remove(category);
 
                 await _context.SaveChangesAsync();
 

@@ -2,6 +2,7 @@ using GameGenesisApi.Data;
 using GameGenesisApi.Services.AccountService;
 using GameGenesisApi.Services.BasketService;
 using GameGenesisApi.Services.CategoryService;
+using GameGenesisApi.Services.ImageService;
 using GameGenesisApi.Services.LibraryService;
 using GameGenesisApi.Services.ProductService;
 using GameGenesisApi.Services.ShopService;
@@ -42,6 +43,7 @@ builder.Services.AddScoped<ILibraryService, LibraryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IShopService, ShopService>();
 builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IImageService, ImageService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

@@ -52,6 +52,7 @@ namespace GameGenesisApi.Data
         public DbSet<Basket> Baskets => Set<Basket>();
         public DbSet<Shop> Shops => Set<Shop>();
         public DbSet<ProductCategory> ProductCategorys => Set<ProductCategory>();
+        public DbSet<Image> Images => Set<Image>();
 
     }
 }

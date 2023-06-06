@@ -4,6 +4,7 @@ using GameGenesisApi.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameGenesisApi.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20230605082340_AddingImages")]
+    partial class AddingImages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -422,13 +425,13 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Basket", null)
                         .WithMany()
                         .HasForeignKey("BasketsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GameGenesisApi.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
@@ -437,7 +440,7 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.User", "User")
                         .WithOne("Account")
                         .HasForeignKey("GameGenesisApi.Models.Account", "UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -448,7 +451,7 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Account", "Account")
                         .WithOne("Basket")
                         .HasForeignKey("GameGenesisApi.Models.Basket", "AccountId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Account");
@@ -459,7 +462,7 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
@@ -470,7 +473,7 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Account", "Account")
                         .WithOne("Library")
                         .HasForeignKey("GameGenesisApi.Models.Library", "AccountId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Account");
@@ -481,7 +484,7 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.User", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Author");
@@ -492,13 +495,13 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Library", null)
                         .WithMany()
                         .HasForeignKey("LibrariesId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GameGenesisApi.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
@@ -507,13 +510,13 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.ProductCategory", null)
                         .WithMany()
                         .HasForeignKey("ProductCategoriesId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GameGenesisApi.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
@@ -522,13 +525,13 @@ namespace GameGenesisApi.Migrations
                     b.HasOne("GameGenesisApi.Models.Product", null)
                         .WithMany()
                         .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("GameGenesisApi.Models.Shop", null)
                         .WithMany()
                         .HasForeignKey("ShopsId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 

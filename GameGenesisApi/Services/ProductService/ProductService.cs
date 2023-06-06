@@ -2,6 +2,7 @@
 using Azure;
 using GameGenesisApi.Data;
 using GameGenesisApi.Dtos.Category;
+using GameGenesisApi.Dtos.Image;
 using GameGenesisApi.Dtos.Library;
 using GameGenesisApi.Dtos.Product;
 using GameGenesisApi.Models;
@@ -51,13 +52,13 @@ namespace GameGenesisApi.Services.ProductService
 
                 try
                 {
-                    var match = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
-                    if (match is null)
+                    var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+                    if (product is null)
                     {
                         throw new Exception($"Match with Id '{id}' not found.");
                     }
 
-                    _context.Products.Remove(match);
+                    _context.Products.Remove(product);
 
                     await _context.SaveChangesAsync();
 
@@ -86,9 +87,11 @@ namespace GameGenesisApi.Services.ProductService
             var serviceResponse = new ServiceProductResponse<GetProductDto>();
             var dbProduct = await _context.Products
                 .Include(p => p.ProductCategories)
+                .Include(p => p.Images)
                 .FirstOrDefaultAsync(m => m.Id == id);
             serviceResponse.Products = _mapper.Map<GetProductDto>(dbProduct);
             serviceResponse.Products.Categories = dbProduct!.ProductCategories!.Select(m => _mapper.Map<GetCategoryDto>(m)).ToList();
+            serviceResponse.Products.Images = dbProduct!.Images!.Select(m => _mapper.Map<GetImageDto>(m)).ToList();
 
             return serviceResponse;
         }
@@ -97,6 +100,7 @@ namespace GameGenesisApi.Services.ProductService
         {
             var serviceResponse = new ServiceProductResponse<List<GetProductDto>>();
             var dbProducts = await _context.Products
+                .Include(p => p.Images)
                 .Include(p => p.ProductCategories).ToListAsync();
 
             serviceResponse.Products = dbProducts.Select(m => _mapper.Map<GetProductDto>(m)).ToList();
@@ -105,7 +109,8 @@ namespace GameGenesisApi.Services.ProductService
             {
                 var dbprod = await _context.Products.Include(p => p.ProductCategories).FirstOrDefaultAsync(p => p.Id == product.Id);
                 product.Categories = dbprod!.ProductCategories!.Select(m => _mapper.Map<GetCategoryDto> (m)).ToList();
-            }
+                product.Images = dbprod!.Images!.Select(m => _mapper.Map<GetImageDto> (m)).ToList();
+            }        
 
             return serviceResponse;
         }

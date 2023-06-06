@@ -10,6 +10,7 @@ namespace GameGenesisApi.Models
         public User Author { get; set; }
         public float Price { get; set; }
         public List<ProductCategory>? ProductCategories { get; set; } 
+        public List<Image>? Images { get; set; }
         public List<Library>? Libraries { get; set; }
         public List<Shop>? Shops { get; set; }
         public List<Basket>? Baskets { get; set; }

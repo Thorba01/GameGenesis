@@ -32,15 +32,15 @@ namespace GameGenesisApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ServiceCategoriesResponse<List<GetCategoryDto>>>> AddCategory(AddCategoryDto newMatch)
+        public async Task<ActionResult<ServiceCategoriesResponse<List<GetCategoryDto>>>> AddCategory(AddCategoryDto newCategory)
         {
-            return Ok(await _categoryService.AddCategory(newMatch));
+            return Ok(await _categoryService.AddCategory(newCategory));
         }
 
         [HttpPut]
-        public async Task<ActionResult<ServiceCategoriesResponse<List<GetCategoryDto>>>> UpdateCategory(UpdateCategoryDto updatedMatch)
+        public async Task<ActionResult<ServiceCategoriesResponse<List<GetCategoryDto>>>> UpdateCategory(UpdateCategoryDto updatedCategory)
         {
-            var response = await _categoryService.UpdateCategory(updatedMatch);
+            var response = await _categoryService.UpdateCategory(updatedCategory);
             if (response.Categories is null)
             {
                 return NotFound(response);

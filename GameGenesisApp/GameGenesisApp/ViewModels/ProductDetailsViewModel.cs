@@ -16,6 +16,8 @@ namespace GameGenesisApp.ViewModels
 		private int productId;
 		RootProduct product;
         ApiServices _apiServices;
+        List<Category> categories;
+        List<Models.Image> images;
         public Command AddToBasketCommand { get; }
         public Command RemoveFromBasketCommand { get; }
         public ProductDetailsViewModel ()
@@ -86,6 +88,8 @@ namespace GameGenesisApp.ViewModels
                 Name = product.Products.name;
                 Description = product.Products.Description;
                 Price = product.Products.Price;
+                Categories = product.Products.Categories;
+                Images = product.Products.Images;
             }
             catch (Exception ex)
             {
@@ -95,6 +99,18 @@ namespace GameGenesisApp.ViewModels
             {
                 IsBusy = false;
             }
+        }
+
+        public List<Category> Categories
+        {
+            get => categories;
+            set => SetProperty(ref categories, value);
+        }
+
+        public List<Models.Image> Images
+        {
+            get => images;
+            set => SetProperty(ref images, value);
         }
 
         private string name;
