@@ -60,22 +60,22 @@ namespace GameGenesisApp.ViewModels
 			set
 			{
 				productId = value;
-				LoadItemId();
-                IsProductInBasket();
+                //LoadItemId();
+                ExecuteLoadPlayersCommand();
             }
         }
 
-		public async Task LoadItemId()
-		{
-            try
-            {
-                ExecuteLoadPlayersCommand();
-            }
-            catch (Exception)
-            {
-                Debug.WriteLine("Failed to Load Item");
-            }
-        }
+		//public async Task LoadItemId()
+		//{
+  //          try
+  //          {
+  //              ExecuteLoadPlayersCommand();
+  //          }
+  //          catch (Exception)
+  //          {
+  //              Debug.WriteLine("Failed to Load Item");
+  //          }
+  //      }
 
 		async Task ExecuteLoadPlayersCommand()
 		{
@@ -97,6 +97,7 @@ namespace GameGenesisApp.ViewModels
             }
             finally
             {
+                IsProductInBasket();
                 IsBusy = false;
             }
         }

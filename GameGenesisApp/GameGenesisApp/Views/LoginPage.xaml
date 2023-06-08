@@ -15,6 +15,7 @@
 
     <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
         <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" IsVisible="{Binding IsBusy, Mode=TwoWay}" Color="Black" />
+        <Image Source="Assets/logo.png"/>
         <Entry Text="{Binding Email}"  Placeholder="Email" />
         <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
         <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand" ></Button>
