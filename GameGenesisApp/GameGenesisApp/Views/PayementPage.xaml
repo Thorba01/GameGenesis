@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameGenesisApp.Views.PayementPage"
+             xmlns:local="clr-namespace:GameGenesisApp.ViewModels"  
+             xmlns:model="clr-namespace:GameGenesisApp.Models"  
+             x:DataType="local:PayementViewModel"
+             x:Name="BrowseItemsPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Numéro de carte" />
+            <Entry Text="{Binding CardNumber}" />
+
+            <Label Text="Date d'expiration (MM/YY)" />
+            <Entry Text="{Binding ExpiryDate}" />
+
+            <Label Text="Code de sécurité (CVC)" />
+            <Entry Text="{Binding CVC}" />
+
+            <Button Text="Payer" Command="{Binding SubmitPaymentCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

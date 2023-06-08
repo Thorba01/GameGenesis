@@ -17,6 +17,7 @@ namespace GameGenesisApp
             Routing.RegisterRoute(nameof(LibraryPage), typeof(LibraryPage));
             Routing.RegisterRoute(nameof(BasketPage), typeof(BasketPage));
             Routing.RegisterRoute(nameof(ProductDetailsPage), typeof(ProductDetailsPage));
+            Routing.RegisterRoute(nameof(PayementPage), typeof(PayementPage));
         }
 
     }

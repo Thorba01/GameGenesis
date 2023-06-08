@@ -38,3 +38,4 @@ F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\obj\Debug\netstandard2.0\
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\obj\Debug\netstandard2.0\Views\BasketPage.xaml.g.cs
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\obj\Debug\netstandard2.0\Views\LibraryPage.xaml.g.cs
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\obj\Debug\netstandard2.0\Views\ProductDetailsPage.xaml.g.cs
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp\obj\Debug\netstandard2.0\Views\PayementPage.xaml.g.cs

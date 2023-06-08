@@ -126,3 +126,10 @@ F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\Multipl
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\ProjectArchitectures.txt
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160715180000000.json
 F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637934950560000000.json
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\Stripe.net.dll
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\System.Configuration.ConfigurationManager.dll
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\bin\x64\Debug\System.Security.Cryptography.ProtectedData.dll
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\FxResources.System.Configuration.ConfigurationManager.SR.resw
+F:\APPPROJET\GameGenesis\GameGenesisApp\GameGenesisApp.UWP\obj\x64\Debug\FxResources.System.Security.Cryptography.ProtectedData.SR.resw

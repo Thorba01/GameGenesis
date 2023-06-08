@@ -183,6 +183,16 @@ namespace GameGenesisApp.Services
             return await Task.FromResult(basket);
         }
 
+        public async Task<RootLibrary> GetLibrary()
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var response = await client.GetStringAsync(url + "api/Library/GetAll");
+            var library = JsonConvert.DeserializeObject<RootLibrary>(response);
+            return await Task.FromResult(library);
+        }
+
         public async Task<RootlistProduct> GetProductFromBasket()
         {
             var storedToken = await SecureStorage.GetAsync("jwt_token");
@@ -226,6 +236,21 @@ namespace GameGenesisApp.Services
             var products = JsonConvert.DeserializeObject<RootlistProduct>(response);
 
             return await Task.FromResult(products);
+        }
+
+        public async Task AddProductToLibrary(int productId, int libraryId)
+        {
+            var storedToken = await SecureStorage.GetAsync("jwt_token");
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("bearer", storedToken);
+
+            var libraryProd = new LibraryProductId
+            {
+                LibrariesId = libraryId,
+                ProductsId = productId
+            };
+
+            var content = new StringContent(JsonConvert.SerializeObject(libraryProd), Encoding.UTF8, "application/json");
+            await client.PostAsync(url + "api/Library/Product", content);
         }
     }
 }
