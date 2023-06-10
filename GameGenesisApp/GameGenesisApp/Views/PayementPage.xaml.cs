@@ -19,6 +19,7 @@ namespace GameGenesisApp.Views
 		{
 			InitializeComponent ();
 			BindingContext = _viewModel = new PayementViewModel();
+            this.BackgroundColor = Color.Black;
         }
 		
     }

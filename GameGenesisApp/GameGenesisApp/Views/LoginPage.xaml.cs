@@ -17,6 +17,7 @@ namespace GameGenesisApp.Views
         {
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
+            this.BackgroundColor = Color.Black;
         }
     }
 }

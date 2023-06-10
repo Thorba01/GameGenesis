@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameGenesisApp.Views.ProductDetailsPage"
@@ -7,45 +8,98 @@
              xmlns:model="clr-namespace:GameGenesisApp.Models" 
              x:DataType="local:ProductDetailsViewModel"
              x:Name="BrowseItemsPage">
-    <ContentPage.Content>
-        <StackLayout >
-            <Label Text="{Binding Name}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding Description}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding Price}"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
 
-            <ListView ItemsSource="{Binding Categories}">
-                <ListView.ItemTemplate>
+        <StackLayout>
+            <Grid Padding="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="Library" Command="{Binding GoToLibrary}" />
+                <Button Grid.Row="0" Grid.Column="1" Text="Basket" Command="{Binding GoToBasket}" />
+                <Button Grid.Row="0" Grid.Column="2" Text="Shop" Command="{Binding GoToShop}" />
+            </Grid>
+
+        <Grid Padding="35,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Name}" 
+                    FontSize="24"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+            
+            
+                <CollectionView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Categories}">
+                    <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Category">
-                        <ViewCell>
-                            <Label Text="{Binding Name}"
-                                VerticalOptions="Center"
-                                LineBreakMode="NoWrap"
-                                FontAttributes="Bold"
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16">
-                            </Label>
-                        </ViewCell>
+                        <Label Text="{Binding Name}"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="StartAndExpand"
+                               LineBreakMode="NoWrap"
+                               FontSize="16" />
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <ListView ItemsSource="{Binding Images}">
-                <ListView.ItemTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <CollectionView Grid.Row="0" Grid.Column="0" ItemsSource="{Binding Images}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Image">
-                        <ViewCell>
-                            <Image
-                                Source="{Binding Path}"/>
-                        </ViewCell>
+                        <Image Source="{Binding Path}" Aspect="AspectFit" HeightRequest="350" WidthRequest="350"/>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button Text="Add To Basket" Command="{Binding AddToBasketCommand}" IsVisible="{Binding IsAddButtonVisible}"/>
-            <Button Text="Remove From Basket" Command="{Binding RemoveFromBasketCommand}" IsVisible="{Binding IsRemoveButtonVisible}"/>
-        </StackLayout>
-    </ContentPage.Content>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Padding="35,0,0,0" Grid.Row="0" Grid.Column="0" Text="{Binding Description}"
+                FontSize="16"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand"/>
+
+            <Label Padding="35,0,0,0" Grid.Row="1" Grid.Column="0" Text="Price :"
+                FontSize="16"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand"/>
+            <Label Padding="35,0,0,0" Grid.Row="2" Grid.Column="0" Text="{Binding Price, StringFormat='{0} euros'}"
+                FontSize="16"
+                VerticalOptions="Start" 
+                HorizontalOptions="StartAndExpand"/>
+        </Grid>
+            <Button Grid.Row="0" Grid.Column="1" Text="Add To Basket" Command="{Binding AddToBasketCommand}" IsVisible="{Binding IsAddButtonVisible}"/>
+            <Button Grid.Row="0" Grid.Column="1" Text="Remove From Basket" Command="{Binding RemoveFromBasketCommand}" IsVisible="{Binding IsRemoveButtonVisible}"/>
+
+    </StackLayout>
 </ContentPage>

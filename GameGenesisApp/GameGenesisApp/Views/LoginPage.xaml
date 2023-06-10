@@ -13,13 +13,15 @@
         <viewModels:LoginViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-        <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" IsVisible="{Binding IsBusy, Mode=TwoWay}" Color="Black" />
-        <Image Source="Assets/logo.png"/>
-        <Entry Text="{Binding Email}"  Placeholder="Email" />
-        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" />
-        <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="FillAndExpand" ></Button>
-        <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="FillAndExpand"></Button>
+    <StackLayout VerticalOptions="Center">
+        <ActivityIndicator IsRunning="{Binding IsBusy, Mode=TwoWay}" IsVisible="{Binding IsBusy, Mode=TwoWay}" Color="DarkOrange" />
+        <Image Source="Assets/logo.png" VerticalOptions="Start"/>
+        <Label Text="Email" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"/>
+        <Entry Text="{Binding Email}"  Placeholder="Email" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"/>
+        <Label Text="Password" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"/>
+        <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"/>
+        <Button Text="Login" Command="{Binding LoginCommand}" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"></Button>
+        <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="Center" WidthRequest="350" VerticalOptions="Center"></Button>
     </StackLayout>
-    
+
 </ContentPage>

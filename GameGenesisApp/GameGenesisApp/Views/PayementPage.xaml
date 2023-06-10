@@ -7,17 +7,20 @@
              x:DataType="local:PayementViewModel"
              x:Name="BrowseItemsPage">
     <ContentPage.Content>
-        <StackLayout Padding="20">
-            <Label Text="Numéro de carte" />
-            <Entry Text="{Binding CardNumber}" />
+        <StackLayout Padding="20" VerticalOptions="Center">
+            <Image Source="Assets/logo.png" VerticalOptions="Start"/>
+            
+            <Label Text="Numéro de carte" HorizontalOptions="Center" WidthRequest="350"/>
+            <Entry Text="{Binding CardNumber}" Placeholder="Entrez votre numéro de carte" HorizontalOptions="Center" WidthRequest="350" />
 
-            <Label Text="Date d'expiration (MM/YY)" />
-            <Entry Text="{Binding ExpiryDate}" />
+            <Label Text="Date d'expiration (MM/YY)" HorizontalOptions="Center" WidthRequest="350"/>
+            <Entry Text="{Binding ExpiryDate}" Placeholder="Entrez la date d'expiration" HorizontalOptions="Center" WidthRequest="350" />
 
-            <Label Text="Code de sécurité (CVC)" />
-            <Entry Text="{Binding CVC}" />
+            <Label Text="Code de sécurité (CVC)" HorizontalOptions="Center" WidthRequest="350"/>
+            <Entry Text="{Binding CVC}" Placeholder="Entrez le code de sécurité" HorizontalOptions="Center" WidthRequest="350" />
 
-            <Button Text="Payer" Command="{Binding SubmitPaymentCommand}" />
+            <Button Text="Payer" Command="{Binding SubmitPaymentCommand}" HorizontalOptions="Center" WidthRequest="350" BackgroundColor="DarkOrange" />
         </StackLayout>
     </ContentPage.Content>
+
 </ContentPage>

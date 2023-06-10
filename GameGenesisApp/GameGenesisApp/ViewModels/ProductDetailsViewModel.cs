@@ -1,11 +1,14 @@
 ﻿using GameGenesisApp.Models;
 using GameGenesisApp.Services;
+using GameGenesisApp.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace GameGenesisApp.ViewModels
@@ -17,14 +20,38 @@ namespace GameGenesisApp.ViewModels
 		RootProduct product;
         ApiServices _apiServices;
         List<Category> categories;
-        List<Models.Image> images;
+        ObservableCollection<Models.Image> images;
+
+        public Command GoToLibrary { get; }
+        public Command GoToBasket { get; }
+        public Command GoToShop { get; }
         public Command AddToBasketCommand { get; }
         public Command RemoveFromBasketCommand { get; }
+
         public ProductDetailsViewModel ()
 		{
             AddToBasketCommand = new Command(AddToBasket);
             RemoveFromBasketCommand = new Command(RemoveFromBasket);
             _apiServices = new ApiServices();
+
+            GoToLibrary = new Command(OnGoToLibrary);
+            GoToBasket = new Command(OnGoToBasket);
+            GoToShop = new Command(OnGoToShop);
+        }
+
+        private async void OnGoToLibrary(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(LibraryPage));
+        }
+
+        private async void OnGoToBasket(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(BasketPage));
+        }
+
+        private async void OnGoToShop(object obj)
+        {
+            await Shell.Current.GoToAsync(nameof(MainPage));
         }
 
         async void IsProductInBasket()
@@ -49,6 +76,15 @@ namespace GameGenesisApp.ViewModels
                     IsRemoveButtonVisible = false;
                 }
             }
+            var libraryResponse = await _apiServices.GetProductFromLibrary();
+            foreach(Product prod in libraryResponse.Products)
+            {
+                if( prod.Id == productId)
+                {
+                    IsAddButtonVisible = false;
+                    IsRemoveButtonVisible = false;
+                }
+            }
         }
 
         public int ProductId
@@ -60,22 +96,9 @@ namespace GameGenesisApp.ViewModels
 			set
 			{
 				productId = value;
-                //LoadItemId();
                 ExecuteLoadPlayersCommand();
             }
         }
-
-		//public async Task LoadItemId()
-		//{
-  //          try
-  //          {
-  //              ExecuteLoadPlayersCommand();
-  //          }
-  //          catch (Exception)
-  //          {
-  //              Debug.WriteLine("Failed to Load Item");
-  //          }
-  //      }
 
 		async Task ExecuteLoadPlayersCommand()
 		{
@@ -108,7 +131,7 @@ namespace GameGenesisApp.ViewModels
             set => SetProperty(ref categories, value);
         }
 
-        public List<Models.Image> Images
+        public ObservableCollection<Models.Image> Images
         {
             get => images;
             set => SetProperty(ref images, value);

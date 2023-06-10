@@ -13,16 +13,18 @@
         <viewModels:RegisterViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-        <Label Text="Email"/>
-        <Entry Text="{Binding Email}"  Placeholder="Email" />
-        <Label Text="Password"/>
-        <Entry Text="{Binding Password}" Placeholder="Password" />
-        <Label Text="Repeat Password"/>
-        <Entry Text="{Binding PasswordTwo}" Placeholder="Repeat Password" />
-        <Label Text="BirthDate"/>
-        <DatePicker x:Name="DatePicker" Date="{Binding BirthDate}" Format="dd_MM_yyyy" MinimumDate="01/01/1943" MaximumDate="{x:Static System:DateTime.Today}"/>
-        <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="FillAndExpand"></Button>
+    <StackLayout Padding="25,0,25,0" VerticalOptions="Center">
+        <Image Source="Assets/logo.png" VerticalOptions="Start" Margin="75"/>
+        <Label Text="Email" HorizontalOptions="Center" WidthRequest="350"/>
+        <Entry Text="{Binding Email}" Placeholder="Email" HorizontalOptions="Center" WidthRequest="350"/>
+        <Label Text="Password" HorizontalOptions="Center" WidthRequest="350"/>
+        <Entry Text="{Binding Password}" Placeholder="Password" HorizontalOptions="Center" WidthRequest="350"/>
+        <Label Text="Repeat Password" HorizontalOptions="Center" WidthRequest="350"/>
+        <Entry Text="{Binding PasswordTwo}" Placeholder="Repeat Password" HorizontalOptions="Center" WidthRequest="350"/>
+        <Label Text="BirthDate" HorizontalOptions="Center" WidthRequest="350"/>
+        <DatePicker x:Name="DatePicker" Date="{Binding BirthDate}" Format="dd_MM_yyyy" MinimumDate="01/01/1943" MaximumDate="{x:Static System:DateTime.Today}" HorizontalOptions="Center" WidthRequest="350"/>
+        <Button Text="Register" Command="{Binding RegisterCommand}" HorizontalOptions="Center" WidthRequest="350"/>
     </StackLayout>
+
 
 </ContentPage>

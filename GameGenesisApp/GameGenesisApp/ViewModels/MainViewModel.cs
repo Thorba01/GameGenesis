@@ -62,6 +62,10 @@ namespace GameGenesisApp.ViewModels
                 foreach (var product in root.products)
                 {
                     Shop.Add(product);
+                    //if (product.Images != null && product.Images.Any())
+                    //{
+                    //    product.Images.Add(product.Images.First());
+                    //}
                 }
 
             }

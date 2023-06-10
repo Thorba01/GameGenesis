@@ -18,6 +18,7 @@ namespace GameGenesisApp.Views
             InitializeComponent();
             this.BindingContext = new RegisterViewModel();
             DatePicker.Date = DateTime.Today;
+            this.BackgroundColor = Color.Black;
 
         }
     }

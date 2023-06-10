@@ -19,6 +19,7 @@ namespace GameGenesisApp.Views
 		{
 			InitializeComponent ();
             BindingContext = _viewModel = new ProductDetailsViewModel();
+            this.BackgroundColor = Color.Black;
         }
         //protected override void OnAppearing()
         //{

@@ -47,7 +47,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <Label Grid.Row="2"  Text="{Binding Amount}" />
-        <Button Grid.Row="3" Text="Buy" Command="{Binding GoToPayementPage}" />
+        <Button Grid.Row="3" Text="Buy" Command="{Binding GoToPayementPage}"/>
     </Grid>
     
 </ContentPage>

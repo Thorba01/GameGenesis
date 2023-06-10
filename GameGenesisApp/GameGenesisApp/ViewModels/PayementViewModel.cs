@@ -23,6 +23,7 @@ namespace GameGenesisApp.ViewModels
 	{
         static string url = "https://localhost:7084/";
         private HttpClient client = new HttpClient();
+        PaymentMethod paymentMethod;
 
         public ObservableCollection<Models.Product> Basket { get; }
         ApiServices _apiServices = new ApiServices();
@@ -108,9 +109,15 @@ namespace GameGenesisApp.ViewModels
             };
 
             var service = new PaymentMethodService();
-            PaymentMethod paymentMethod = await service.CreateAsync(options);
-
-            await SendPaymentMethodToApi(paymentMethod.Id, Amount);
+            try
+            {
+                paymentMethod = await service.CreateAsync(options);
+                await SendPaymentMethodToApi(paymentMethod.Id, Amount);
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", ex.ToString(), "Ok");
+            }
         }
 
         private async Task SendPaymentMethodToApi(string paymentMethodId, long amount)

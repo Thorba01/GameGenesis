@@ -86,9 +86,7 @@ namespace GameGenesisApp.ViewModels
                 foreach (var product in root.Products)
                 {
                     Basket.Add(product);
-                }
-                
-
+                }        
             }
             catch (Exception ex)
             {

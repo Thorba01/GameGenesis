@@ -19,7 +19,7 @@ namespace GameGenesisApp.Views
 		{
 			InitializeComponent ();
             BindingContext = _viewModel = new LibraryViewModel();
-
+            this.BackgroundColor = Color.Black;
         }
 
         protected override void OnAppearing()

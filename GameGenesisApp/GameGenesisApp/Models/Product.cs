@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace GameGenesisApp.Models
@@ -12,6 +13,6 @@ namespace GameGenesisApp.Models
         public User Author { get; set; }
         public long Price { get; set; }
         public List<Category> Categories { get; set; }
-        public List<Image> Images { get; set; }
+        public ObservableCollection<Image> Images { get; set; }
     }
 }

@@ -7,44 +7,67 @@
              xmlns:model="clr-namespace:GameGenesisApp.Models"  
              x:DataType="local:MainViewModel"
              x:Name="BrowseItemsPage">
-
+    <StackLayout>
+        
     <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
-        </Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
 
         <Button Grid.Row="0" Grid.Column="0" Text="Library" Command="{Binding GoToLibrary}" />
         <Button Grid.Row="0" Grid.Column="1" Text="Basket" Command="{Binding GoToBasket}" />
         <Button Grid.Row="0" Grid.Column="2" Text="Shop" Command="{Binding GoToShop}" />
+    </Grid>
 
-        <ListView Grid.Row="1" x:Name="ShopListView" ItemsSource="{Binding Shop}">
+        <ListView x:Name="ShopListView" ItemsSource="{Binding Shop}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Product">
                     <ViewCell>
-                        <Label Text="{Binding name}"
-                                VerticalOptions="Center"
-                                LineBreakMode="NoWrap"
-                                FontAttributes="Bold"
-                                Style="{DynamicResource ListItemTextStyle}" 
-                                FontSize="16">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:MainViewModel}}, Path=ProductTapped}"		
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding name}"
+                           VerticalOptions="Center"
+                           LineBreakMode="NoWrap"
+                           FontAttributes="Bold"
+                           Style="{DynamicResource ListItemTextStyle}" 
+                           FontSize="16">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:MainViewModel}}, Path=ProductTapped}"      
                                 CommandParameter="{Binding .}">
-                                </TapGestureRecognizer>
-                            </Label.GestureRecognizers>
-                        </Label>
+                                    </TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Grid.Row="0" Grid.Column="1"
+                           Text="{Binding Price, StringFormat='{0} euros'}"
+                           VerticalOptions="Center"
+                           LineBreakMode="NoWrap"
+                           FontAttributes="Bold"
+                           Style="{DynamicResource ListItemTextStyle}" 
+                           FontSize="16"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
+
+    </StackLayout>
+    
 
 </ContentPage>

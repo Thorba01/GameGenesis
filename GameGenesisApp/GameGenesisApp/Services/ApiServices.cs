@@ -129,8 +129,6 @@ namespace GameGenesisApp.Services
                 return token;
             }
 
-            Debug.WriteLine(token.Data + "/////////////////////////////////////////////////////// ICI ");
-
             await SecureStorage.SetAsync("jwt_token", token.Data);
 
             return token;
