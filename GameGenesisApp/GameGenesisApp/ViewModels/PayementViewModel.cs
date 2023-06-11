@@ -34,7 +34,7 @@ namespace GameGenesisApp.ViewModels
             SubmitPaymentCommand = new Command(async () => await SubmitPayment());
             client = new HttpClient();
             Basket = new ObservableCollection<Models.Product>();
-
+            Title = "Payment";
         }
 
         public ICommand SubmitPaymentCommand { get; private set; }

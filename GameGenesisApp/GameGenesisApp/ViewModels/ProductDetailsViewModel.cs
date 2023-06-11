@@ -109,6 +109,7 @@ namespace GameGenesisApp.ViewModels
                 product = await _apiServices.GetProductById(productId);
 
                 Name = product.Products.name;
+                Title = Name;
                 Description = product.Products.Description;
                 Price = product.Products.Price;
                 Categories = product.Products.Categories;

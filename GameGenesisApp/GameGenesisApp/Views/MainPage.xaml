@@ -24,7 +24,7 @@
         <Button Grid.Row="0" Grid.Column="2" Text="Shop" Command="{Binding GoToShop}" />
     </Grid>
 
-        <ListView x:Name="ShopListView" ItemsSource="{Binding Shop}">
+        <ListView x:Name="ShopListView" ItemsSource="{Binding DisplayedProducts}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="model:Product">
                     <ViewCell>
@@ -66,6 +66,8 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Previous" Command="{Binding PreviousCommand}"/>
+        <Button Text="Next" Command="{Binding NextCommand}"/>
 
     </StackLayout>
     

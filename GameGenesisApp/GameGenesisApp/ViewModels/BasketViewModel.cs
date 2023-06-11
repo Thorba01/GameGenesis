@@ -34,6 +34,7 @@ namespace GameGenesisApp.ViewModels
             GoToPayementPage = new Command(OnGoToPayement);
 
             Basket = new ObservableCollection<Product>();
+            Title = "Basket";
         }
 
         private async void OnGoToLibrary(object obj)

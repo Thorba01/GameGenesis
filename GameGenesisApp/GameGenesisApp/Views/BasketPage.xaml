@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GameGenesisApp.Views.BasketPage"
+             Title="{Binding Title}"
              xmlns:local="clr-namespace:GameGenesisApp.ViewModels"  
              xmlns:model="clr-namespace:GameGenesisApp.Models"  
              x:DataType="local:BasketViewModel"
